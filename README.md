@@ -1,6 +1,7 @@
-frontend-nanodegree-arcade-game
+Frogger Clone
 ===============================
 
-Students should use this rubric: https://www.udacity.com/course/viewer#!/c-ud015/l-3072058665/m-3072588797
+This is an difficult version of the classic arcade game Frogger.
 
-for self-checking their submission.
+Use the arrow keys to move the character.
+Avoid hitting the bugs while trying to make it to the water on the other side of the stone. When you reach the water your character will move back to the grass so that you can try again.
