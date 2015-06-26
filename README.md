@@ -1,5 +1,5 @@
 # Udacity Front-end Nonodegree - Project 3
-## Udacity Classic Arcade Game
+## Classic Arcade Game
 
 ###Description
 This is a difficult version of the classic arcade game Frogger.

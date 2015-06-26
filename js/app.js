@@ -22,7 +22,7 @@ Enemy.prototype.update = function(dt) {
     else {this.x = -90;}
 
     if(this.x < player.x + 30 && this.x + 60 > player.x && this.y < player.y + 60 && this.y + 40 > player.y) {
-        player.reset();
+		player.reset();
     }
 };
 
@@ -43,9 +43,7 @@ var Player = function () {
 
 Player.prototype.update = function() {
  if (player.y < 20) {
-    player.score++;
-    console.log(player.score);
-    player.reset();
+    this.reset();
 }
 };
 
@@ -85,7 +83,6 @@ var enemy6 = new Enemy(-890, 230);
 var allEnemies = [enemy1, enemy2, enemy3, enemy4, enemy5, enemy6];
 // Place the player object in a variable called player
 var player = new Player();
-player.score = 0;
 
 
 
