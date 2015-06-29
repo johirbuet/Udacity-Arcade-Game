@@ -1,3 +1,7 @@
+// Sets an initial player score of 0.
+var score = 0;
+document.getElementById('playerScore').innerHTML = score;
+
 // Enemies our player must avoid
 var Enemy = function(x, y) {
     // Variables applied to each of our instances go here,
@@ -21,7 +25,10 @@ Enemy.prototype.update = function(dt) {
     }
     else {this.x = -90;}
 
+	// If the enemy and the player collide.
     if(this.x < player.x + 30 && this.x + 60 > player.x && this.y < player.y + 60 && this.y + 40 > player.y) {
+		score = 0;
+		document.getElementById('playerScore').innerHTML = score;
 		player.reset();
     }
 };
@@ -41,9 +48,14 @@ var Player = function () {
     this.y = 320;
 };
 
+// Is called every time the player position is updated
 Player.prototype.update = function() {
- if (player.y < 20) {
-    this.reset();
+ 	
+	// If the player reaches the water
+	if (player.y < 20) {
+	score++;
+	document.getElementById('playerScore').innerHTML = score;
+	this.reset();
 }
 };
 
@@ -66,6 +78,7 @@ Player.prototype.handleInput = function(direction) {
     }
 };
 
+// Is called when the player is reset to the starting point
 Player.prototype.reset = function() {
     this.x = 200;
     this.y = 320;
